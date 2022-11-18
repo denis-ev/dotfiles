@@ -70,7 +70,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(ansible brew colorize command-not-found cp dirhistory git git-escape-magic gitignore git-prompt gpg-agent kubectl macos vscode zsh-interactive-cd)
+plugins=(ansible brew colorize command-not-found cp git git-escape-magic gitignore git-prompt gpg-agent kubectl macos vscode zsh-interactive-cd)
 
 source $ZSH/oh-my-zsh.sh
 
