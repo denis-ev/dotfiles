@@ -79,6 +79,9 @@ source $ZSH/oh-my-zsh.sh
 export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
 export KUBECONFIG=~/git/k8s-lab/provision/kubeconfig
 
+# Unused to not force this https://github.com/FiloSottile/yubikey-agent#coexisting-with-other-ssh-agents
+#export SSH_AUTH_SOCK="/usr/local/var/run/yubikey-agent.sock"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
