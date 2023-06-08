@@ -111,3 +111,7 @@ export PATH="$PATH:/Users/denis/local_bin"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(rbenv init - zsh)"
+
+sr() {
+    docker-compose stop "$1" && docker-compose rm -f "$1" && docker-compose up -d "$1" && docker-compose logs -f "$1"
+}
