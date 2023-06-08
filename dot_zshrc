@@ -106,7 +106,7 @@ alias ohmyzsh="chezmoi edit ~/.oh-my-zsh"
 
 export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
 export KUBECONFIG=~/git/k8s-lab/provision/kubeconfig.yaml
-export PATH="$PATH:/Users/denis/local_bin"
+export PATH="$PATH:/usr/local/opt/libpq/bin:/Users/denis/local_bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
