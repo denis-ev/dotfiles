@@ -113,7 +113,12 @@ export PATH="$PATH:/usr/local/opt/libpq/bin:/Users/denis/local_bin"
 eval "$(rbenv init - zsh)"
 
 sr() {
-        docker-compose stop "$1" && docker-compose rm -f "$1" && docker-compose up -d "$1" && if [[ "$2" == "exec" ]]; then docker-compose exec "$1" /bin/bash else docker-compose logs -f "$1" fi
+        docker-compose stop "$1" && docker-compose rm -f "$1" && docker-compose up -d "$1"
+        if [[ "$2" == "exec" ]]; then 
+          docker-compose exec "$1" /bin/bash 
+        else 
+          docker-compose logs -f "$1" 
+        fi
 }
 sd() {
     docker-compose stop "$1" && docker-compose rm -f "$1"
