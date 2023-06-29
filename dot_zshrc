@@ -104,20 +104,21 @@ fi
 alias zshconfig="chezmoi edit ~/.zshrc"
 alias ohmyzsh="chezmoi edit ~/.oh-my-zsh"
 
-export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
+#export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
 #export KUBECONFIG=~/git/k8s-lab/provision/kubeconfig.yaml
-export PATH="$PATH:/usr/local/opt/libpq/bin:/Users/denis/local_bin"
+#export PATH="$PATH:/usr/local/opt/libpq/bin:/Users/denis/local_bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(rbenv init - zsh)"
+eval "$(direnv hook zsh)"
 
 sr() {
         docker-compose stop "$1" && docker-compose rm -f "$1" && docker-compose up -d "$1"
-        if [[ "$2" == "exec" ]]; then 
-          docker-compose exec "$1" /bin/bash 
-        else 
-          docker-compose logs -f "$1" 
+        if [[ "$2" == "exec" ]]; then
+          docker-compose exec "$1" /bin/bash
+        else
+          docker-compose logs -f "$1"
         fi
 }
 sd() {
